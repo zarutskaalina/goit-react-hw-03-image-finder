@@ -1,15 +1,7 @@
-import { Component } from 'react';
-
-export const ImageGalleryItem = () => {
+export const ImageGalleryItem = ({ id, largeImageURL, tags }) => {
   return (
-    <li className="gallery-item">
-      <img
-        src={image.previewURL}
-        alt={image.tags}
-        height="500"
-        width="900"
-        loading="lazy"
-      />
-    </li>
+    <div className="modal">
+      <img key={id} src={largeImageURL} alt={tags} height="500" width="900" />
+    </div>
   );
 };

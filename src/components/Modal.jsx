@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { StyledModal } from './Styles';
+import { ImageGalleryItem } from './ImageGalleryItem';
 
 export class Modal extends Component {
   componentDidMount() {
@@ -27,12 +28,10 @@ export class Modal extends Component {
     return (
       <StyledModal onClick={this.handleOverlayClick}>
         <div className="modal">
-          <img
-            key={modalData.id}
-            src={modalData.largeImageURL}
-            alt={modalData.tags}
-            height="500"
-            width="900"
+          <ImageGalleryItem
+            id={modalData.id}
+            largeImageURL={modalData.largeImageURL}
+            tags={modalData.tags}
           />
         </div>
       </StyledModal>

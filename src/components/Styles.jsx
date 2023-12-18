@@ -16,7 +16,6 @@ export const GalleryContainer = styled.ul`
   align-items: center;
   list-style: none;
   padding: 20px 0;
-  position: absolute;
 `;
 
 export const LoaderContainer = styled.div`

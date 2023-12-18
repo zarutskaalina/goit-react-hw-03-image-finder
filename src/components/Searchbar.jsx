@@ -28,7 +28,11 @@ export class Searchbar extends Component {
     return (
       <SearchbarContainer>
         <form className="form" onSubmit={this.handleSubmit}>
-          <button type="submit" className="button">
+          <button
+            type="submit"
+            className="button"
+            disabled={!this.state.search}
+          >
             <span className="button-label">Search</span>
           </button>
 

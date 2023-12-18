@@ -12,6 +12,7 @@ axios.defaults.baseURL = 'https://pixabay.com/api/';
 export class App extends Component {
   state = {
     imgData: null,
+    lastImages: [],
     isLoading: false,
     error: null,
     page: 1,
@@ -33,6 +34,7 @@ export class App extends Component {
 
       this.setState(prevState => ({
         imgData: [...prevState.imgData, ...data.hits],
+        lastImages: data.hits,
       }));
     } catch (error) {
       this.setState({ error: error.message });
@@ -84,7 +86,7 @@ export class App extends Component {
   };
 
   render() {
-    const { imgData, isLoading, error, isOpenModal } = this.state;
+    const { imgData, isLoading, error, isOpenModal, lastImages } = this.state;
 
     return (
       <div>
@@ -94,9 +96,9 @@ export class App extends Component {
             <b>Sorry, an error occurred {error}!</b>
           </ErrorMessage>
         )}
-        {isLoading && <Loader />}
         <ImageGallery imgData={imgData} openModal={this.openModal} />
-        {!error && !isLoading && imgData && (
+        {isLoading && <Loader />}
+        {!error && !isLoading && imgData && lastImages.length >= 12 && (
           <Button handleButton={this.handleButton} />
         )}
         {isOpenModal && (

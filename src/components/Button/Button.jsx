@@ -1,4 +1,4 @@
-import { ContainerBtn } from 'components/Styles';
+import { ContainerBtn } from './ButtonStyles';
 
 export const Button = ({ handleButton }) => {
   return (

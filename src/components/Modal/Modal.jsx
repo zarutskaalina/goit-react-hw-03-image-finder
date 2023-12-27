@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import { StyledModal } from './Styles';
-import { ImageGalleryItem } from './ImageGalleryItem';
+import { StyledModal } from './ModalStyles';
+import { ImageGalleryItem } from '../ImageGallery/ImageGalleryItem';
 
 export class Modal extends Component {
   componentDidMount() {

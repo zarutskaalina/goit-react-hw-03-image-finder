@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import axios from 'axios';
-import { ImageGallery } from './ImageGallery';
-import { Searchbar } from './Searchbar';
-import { Button } from './Button';
-import { Modal } from './Modal';
-import { Loader } from './Loader';
+import { ImageGallery } from './ImageGallery/ImageGallery';
+import { Searchbar } from './Searchbar/Searchbar';
+import { Button } from './Button/Button';
+import { Modal } from './Modal/Modal';
+import { Loader } from './Loader/Loader';
 import { ErrorMessage } from './Styles';
 
 axios.defaults.baseURL = 'https://pixabay.com/api/';

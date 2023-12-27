@@ -1,4 +1,4 @@
-import { GalleryContainer } from './Styles';
+import { GalleryContainer } from './ImageGalleryStyles';
 
 export const ImageGallery = ({ imgData, openModal }) => {
   return (
